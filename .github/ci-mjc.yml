@@ -1,4 +1,4 @@
-name:
+name: Our CI
 
 on: push
 
@@ -6,7 +6,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
       steps:
-        - name: First step
+        - name: Checkout repo
+          uses: actions/checkout@v4
+        - name: Second step
           run: |  
           echo "Hello world"
           mkdir mydir
